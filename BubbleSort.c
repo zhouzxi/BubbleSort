@@ -27,27 +27,27 @@
 void BubbleSort(INT32 *pszArray, UINT32 iArrayLen)
 {
     UINT32 iInnerLoop  = 0;
-	UINT32 iOutterLoop = 0;
-	INT32  iTmpVal     = 0;
+    UINT32 iOutterLoop = 0;
+    INT32  iTmpVal     = 0;
 	
-	if (pszArray == NULL)
-	{
-	    printf("BubbleSort: pszArray is NULL!\n");
-		return;
-	}
-	
-	for (iOutterLoop = 0; iOutterLoop < iArrayLen; iOutterLoop ++)
-	{
-	    for (iInnerLoop = 0; iInnerLoop < iArrayLen-iOutterLoop-1; iInnerLoop ++)
-		{
-		    if (pszArray[iInnerLoop] > pszArray[iInnerLoop+1])
-			{
-			    iTmpVal                = pszArray[iInnerLoop];
-				pszArray[iInnerLoop]   = pszArray[iInnerLoop+1];
-				pszArray[iInnerLoop+1] = iTmpVal;
-			}
-		}
-	}
-	
+    if (pszArray == NULL)
+    {
+        printf("BubbleSort: pszArray is NULL!\n");
 	return;
+    }
+	
+    for (iOutterLoop = 0; iOutterLoop < iArrayLen; iOutterLoop ++)
+    {
+        for (iInnerLoop = 0; iInnerLoop < iArrayLen-iOutterLoop-1; iInnerLoop ++)
+ 	{
+	    if (pszArray[iInnerLoop] > pszArray[iInnerLoop+1])
+            {
+	        iTmpVal                = pszArray[iInnerLoop];
+		pszArray[iInnerLoop]   = pszArray[iInnerLoop+1];
+		pszArray[iInnerLoop+1] = iTmpVal;
+	    }
+	}
+    }
+	
+    return;
 }
