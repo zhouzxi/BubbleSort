@@ -26,27 +26,27 @@
 INT32 main()
 {
     UINT32 iLoopFlag   = 0;
-	  INT32  szArray[10] = {0};
+    INT32  szArray[10] = {0};
  	
-	  printf("请输入10个整数: \n");
-	
-	  // 读入需要排序的10个整数
-	  for (iLoopFlag = 0; iLoopFlag < 10; iLoopFlag ++)
-	  {
-	      scanf("%d", &szArray[iLoopFlag]); 
-	  }
+    printf("请输入10个整数: \n");
+    
+    // 读入需要排序的10个整数
+    for (iLoopFlag = 0; iLoopFlag < 10; iLoopFlag ++)
+    {
+        scanf("%d", &szArray[iLoopFlag]); 
+    }
 
-	  // 对输入的整数进行冒泡排序
+    // 对输入的整数进行冒泡排序
     BubbleSort(szArray, 10);
 	
-	  // 打印排序之后的结果
-	  printf("排序之后的结果为: \n");
-	  for (iLoopFlag = 0; iLoopFlag < 10; iLoopFlag ++) 
-	  {
-	      printf("%-5d", szArray[iLoopFlag]); 
-	  }
+    // 打印排序之后的结果
+    printf("排序之后的结果为: \n");
+    for (iLoopFlag = 0; iLoopFlag < 10; iLoopFlag ++) 
+    {
+        printf("%-5d", szArray[iLoopFlag]); 
+    }
 
-	  printf("\n"); 
+    printf("\n"); 
 
     return 0;
 }
